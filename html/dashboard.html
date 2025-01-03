@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/output.css" />
+  <title>Document</title>
+</head>
+
+<body class="w-screen h-screen">
+  <div class="w-full h-full flex flex-row">
+    <!-- Sidebar -->
+    <aside id="default-sidebar" class="sticky w-80 h-screen transition-transform -translate-x-full sm:translate-x-0 p-4"
+      aria-label="Sidebar">
+      <div class="h-full px-10 py-6 overflow-y-auto bg-blue-600 dark:bg-gray-800 rounded-2xl">
+        <ul class="space-y-5 font-medium text-white">
+          <li>
+            <p class="text-2xl font-bold">BrightMinds</p>
+          </li>
+          <li>
+            <a href="#" class="flex items-center px-4 py-2 rounded-lg bg-blue-300 bg-opacity-30 border-blue-100 border">
+              <svg class="flex-shrink-0 w-5 h-5 text-white transition duration-75" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 18">
+                <path
+                  d="M6.143 0H1.857A1.857 1.857 0 0 0 0 1.857v4.286C0 7.169.831 8 1.857 8h4.286A1.857 1.857 0 0 0 8 6.143V1.857A1.857 1.857 0 0 0 6.143 0Zm10 0h-4.286A1.857 1.857 0 0 0 10 1.857v4.286C10 7.169 10.831 8 11.857 8h4.286A1.857 1.857 0 0 0 18 6.143V1.857A1.857 1.857 0 0 0 16.143 0Zm-10 10H1.857A1.857 1.857 0 0 0 0 11.857v4.286C0 17.169.831 18 1.857 18h4.286A1.857 1.857 0 0 0 8 16.143v-4.286A1.857 1.857 0 0 0 6.143 10Zm10 0h-4.286A1.857 1.857 0 0 0 10 11.857v4.286c0 1.026.831 1.857 1.857 1.857h4.286A1.857 1.857 0 0 0 18 16.143v-4.286A1.857 1.857 0 0 0 16.143 10Z" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-blue-300 hover:bg-opacity-30 hover:border-blue-100 hover:border">
+              <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                <path
+                  d="m17.418 3.623-.018-.008a6.713 6.713 0 0 0-2.4-.569V2h1a1 1 0 1 0 0-2h-2a1 1 0 0 0-1 1v2H9.89A6.977 6.977 0 0 1 12 8v5h-2V8A5 5 0 1 0 0 8v6a1 1 0 0 0 1 1h8v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h6a1 1 0 0 0 1-1V8a5 5 0 0 0-2.582-4.377ZM6 12H4a1 1 0 0 1 0-2h2a1 1 0 0 1 0 2Z" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Inbox</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-blue-300 hover:bg-opacity-30 hover:border-blue-100 hover:border">
+              <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
+                <path
+                  d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Account</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-blue-300 hover:bg-opacity-30 hover:border-blue-100 hover:border">
+              <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 20">
+                <path
+                  d="M17 5.923A1 1 0 0 0 16 5h-3V4a4 4 0 1 0-8 0v1H2a1 1 0 0 0-1 .923L.086 17.846A2 2 0 0 0 2.08 20h13.84a2 2 0 0 0 1.994-2.153L17 5.923ZM7 9a1 1 0 0 1-2 0V7h2v2Zm0-5a2 2 0 1 1 4 0v1H7V4Zm6 5a1 1 0 1 1-2 0V7h2v2Z" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Classes</span>
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              class="flex items-center px-4 py-2 text-white rounded-lg hover:bg-blue-300 hover:bg-opacity-30 hover:border-blue-100 hover:border">
+              <svg class="flex-shrink-0 w-5 h-5 transition duration-75" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 16">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M1 8h11m0 0L8 4m4 4-4 4m4-11h3a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-3" />
+              </svg>
+              <span class="flex-1 ms-3 whitespace-nowrap">Sign In</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Kalo Mau Nambahin disini -->
+    <div class="flex flex-col p-4 w-9/12">
+      <!-- Navbar Search, Notifikasi, Users -->
+      <div class="flex flex-row gap-5">
+        <div class="w-full">
+          <label for="default-search"
+            class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>
+          <div class="relative">
+            <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+              <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+              </svg>
+            </div>
+            <input type="search" id="default-search"
+              class="block w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-xl bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
+              placeholder="Search Mockups, Logos..." required />
+          </div>
+        </div>
+        <div class="w-16 bg-gray-300 justify-center flex rounded-2xl">
+          <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification"
+            class="relative inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400"
+            type="button">
+            <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+              viewBox="0 0 14 20">
+              <path
+                d="M12.133 10.632v-1.8A5.406 5.406 0 0 0 7.979 3.57.946.946 0 0 0 8 3.464V1.1a1 1 0 0 0-2 0v2.364a.946.946 0 0 0 .021.106 5.406 5.406 0 0 0-4.154 5.262v1.8C1.867 13.018 0 13.614 0 14.807 0 15.4 0 16 .538 16h12.924C14 16 14 15.4 14 14.807c0-1.193-1.867-1.789-1.867-4.175ZM3.823 17a3.453 3.453 0 0 0 6.354 0H3.823Z" />
+            </svg>
+          </button>
+        </div>
+        <div class="w-16 shadow-sm rounded-full">
+          <img src="/src/sadboy.jpeg" alt="" class="rounded-full" />
+        </div>
+      </div>
+
+      <div class="w-full flex flex-row gap-4 mt-6">
+        <!-- Classes, Material Finished, Material Upload, Material Unfinished -->
+        <div class="w-7/12 flex flex-col gap-3">
+          <div class="flex flex-row w-full gap-3">
+            <div class="flex flex-row bg-purple-500 p-3 rounded-2xl text-white w-3/6">
+              <p class="w-1/6 bg-white  text-center justify-center flex flex-col rounded-xl font-bold text-black">20</p>
+              <div class="flex-col px-2 w-5/6">
+                <p class="font-medium">Classes</p>
+                <p class="text-xs font-light">All the classes you are currently managing as a teacher</p>
+              </div>
+            </div>
+            <div class="flex flex-row bg-emerald-500 p-3 rounded-2xl text-white w-3/6">
+              <p class="w-1/6 bg-white  text-center justify-center flex flex-col rounded-xl font-bold text-black">20</p>
+              <div class="flex-col px-2 w-5/6">
+                <p class="font-medium">Materials Finished</p>
+                <p class="text-xs font-light">All the materials students have finished and graded</p>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-row w-full gap-3">
+            <div class="flex flex-row bg-yellow-400 p-3 rounded-2xl text-black w-3/6">
+              <p class="w-1/6 bg-white  text-center justify-center flex flex-col rounded-xl font-bold text-black">20</p>
+              <div class="flex-col px-2 w-5/6">
+                <p class="font-medium">Materials Uploaded</p>
+                <p class="text-xs font-light">All the materials uploaded to classes you managed</p>
+              </div>
+            </div>
+            <div class="flex flex-row bg-red-400 p-3 rounded-2xl text-white w-3/6">
+              <p class="w-1/6 bg-white  text-center justify-center flex flex-col rounded-xl font-bold text-black">20</p>
+              <div class="flex-col px-2 w-5/6">
+                <p class="text-xs font-medium">Materials Unfinished</p>
+                <p class="text-xs font-light">All the materials students haven’t finished and not have been</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submitted Materials Checked, Submitted Materials Unchecked -->
+        <div class="w-5/12 flex flex-col gap-5">
+          <div class="w-full flex flex-row gap-2">
+            <img src="/src/target.svg" alt=""
+              class="p-4 bg-blue-50  text-center justify-center flex flex-col rounded-xl">
+            <div class="w-56">
+              <h1 class="text-sm font-bold">Submitted Materials Checked</h1>
+              <p class="text-xs ">All the materials students submitted have already been checked and have been assessed
+              </p>
+            </div>
+          </div>
+          <div class="w-full flex flex-row gap-2">
+            <img src="/src/warning.svg" alt=""
+              class="p-4 bg-blue-50  text-center justify-center flex flex-col rounded-xl">
+            <div class="w-56">
+              <h1 class="text-sm font-bold">Submitted Materials Unchecked</h1>
+              <p class="text-xs ">All the materials students submitted are awaiting review and have not been graded</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Classes -->
+      <div class="w-full flex flex-row gap-4 mt-6 h-full ">
+        <div class="w-7/12 flex flex-col bg-blue-50 rounded-2xl px-4 py-6 gap-3 relative">
+          <div>
+            <h1 class="font-medium text-xl">Recent Classes</h1>
+            <p class="font-light text-sm text-gray-600">Recently Managed Classes</p>
+          </div>
+
+          <div class="w-full flex flex-row gap-4 rounded-lg bg-white border border-gray-200">
+            <img src="/src/physics.jpg" alt="" class="w-32 rounded-l-lg">
+            <div class="flex flex-col gap-1 justify-center">
+              <h1 class=" font-bold">Physics Class</h1>
+              <p class="font-light text-sm">Lorem Ipsum is simply dummy text...</p>
+            </div>
+          </div>
+
+          <div class="absolute right-5 bottom-3 flex flex-row gap-2 justify-center">
+            <p class="text-xs font-bold">1/1</p>
+            <button id="next" name="next" type="button" class="text-xs font-bold text-blue-600">NEXT</button>
+          </div>
+        </div>
+
+        <div class="w-5/12 flex flex-col bg-blue-50 rounded-2xl px-4 py-6 gap-3 relative">
+          <div>
+            <h1 class="font-medium text-xl">Recent Notifications</h1>
+            <p class="font-light text-sm text-gray-600">Recently Popped up notificitaions</p>
+          </div>
+
+          <div class="w-full flex flex-row gap-2 bg-green-600 bg-opacity-20 relative">
+              <div class="bg-green-600 w-4 top-0 "></div>
+              <p class="font-light text-sm p-3">Student 1 Completed Material 10</p>
+          </div>
+
+          <div class="w-full flex flex-row gap-2 bg-yellow-400 bg-opacity-20 relative">
+            <div class="bg-yellow-400 w-4 top-0 "></div>
+            <p class="font-light text-sm p-3">Student 3 Missed Material 10</p>
+        </div>
+
+          <div class="absolute right-5 bottom-3 flex flex-row gap-2 justify-center">
+            <p class="text-xs font-bold">1/1</p>
+            <button id="next" name="next" type="button" class="text-xs font-bold text-blue-600">NEXT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+
+</html>

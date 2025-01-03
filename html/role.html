@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/output.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <body class="h-screen">
+      <div class="h-full flex flex-row">
+        <div class="w-full flex flex-col justify-center px-6 py-12">
+          <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <div>
+              <h2
+                class="mt-10 text-2xl/9 font-bold tracking-tight text-gray-900"
+              >
+                Sign Up
+              </h2>
+              <p>Create and account to enter</p>
+            </div>
+          </div>
+
+          <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form class="space-y-6" action="#" method="POST">
+              <div>
+                <ul class="grid w-full gap-6 md:grid-cols-2">
+                  <li>
+                    <input
+                      type="radio"
+                      id="hosting-small"
+                      name="hosting"
+                      value="hosting-small"
+                      class="hidden peer"
+                      required
+                    />
+                    <label
+                      for="hosting-small"
+                      class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <div class="block">
+                        <div>Student</div>
+                      </div>
+                    </label>
+                  </li>
+                  <li>
+                    <input
+                      type="radio"
+                      id="hosting-big"
+                      name="hosting"
+                      value="hosting-big"
+                      class="hidden peer"
+                    />
+                    <label
+                      for="hosting-big"
+                      class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
+                    >
+                      <div class="block">
+                        <div>Teacher</div>
+                      </div>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <button
+                  type="submit"
+                  class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                >
+                  Conntinue
+                </button>
+              </div>
+            </form>
+
+            <p class="mt-10 text-center text-sm/6 text-gray-500">
+              Already have an account?
+              <a class="font-semibold text-blue-600" href="/html/login.html"
+                >Login</a
+              >
+            </p>
+          </div>
+        </div>
+        <div class="w-full text-center p-10">
+          <div
+            class="bg-blue-600 w-full h-full rounded-lg flex flex-col justify-center"
+          >
+            <h2 class="text-white font-bold text-4xl">BrightMinds</h2>
+          </div>
+        </div>
+      </div>
+    </body>
+  </body>
+</html>
