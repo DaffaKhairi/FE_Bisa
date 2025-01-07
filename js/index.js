@@ -249,4 +249,87 @@ function displayMaterial(Materials) {
   });
 }
 
+async function fetchAnswer(idClass, idMaterial) {
+  const apiUrl = `http://localhost:9876/class/${idClass}/material/${idMaterial}/answer`;
+  const accessToken = getAccessToken();
 
+  if (!accessToken) {
+    console.error("Access Token is missing. Redirecting to login.");
+    window.location.href = "/HTML/login.html";
+    return;
+  }
+
+  try {
+    console.log("Sending request with Access Token:", accessToken);
+
+    const response = await fetch(url, {
+      method: "POST",
+      mode: "cors", // Enable CORS
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": accessToken,
+      },
+      body: JSON.stringify({
+        "asnwer" : answer,
+      }),
+    });
+
+    if (!response.ok) {
+      const errorBody = await response.text();
+      console.error(`HTTP Error: ${response.status}, Message: ${errorBody}`);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const materials = await response.json();
+    console.log("Fetched Classes:", materials);
+    displayMaterial(materials)
+  } catch (error) {
+    console.error("Error fetching all classes:", error);
+  }
+}
+
+// Class Enrolade :)
+async function fetchEnrolledClasses() {
+  const apiUrl = "http://localhost:9876/class/enrolled";
+  const accessToken = getAccessToken();
+
+  if (!accessToken) {
+    console.error("Access Token is missing. Redirecting to login.");
+    window.location.href = "/HTML/login.html";
+    return;
+  }
+
+  try {
+    console.log("Sending request with Access Token:", accessToken);
+
+    const response = await fetch(apiUrl, {
+      method: "GET",
+      mode: "cors",
+      headers: {
+        "Content-Type": "application/json",
+        "Authorization": accessToken,
+      },
+    });
+
+    if (!response.ok) {
+      const errorBody = await response.text();
+      console.error(`HTTP Error: ${response.status}, Message: ${errorBody}`);
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const classes = await response.json();
+    console.log("Fetched Classes:", classes.enrolledClasses);
+
+    displayClass(classes)
+  } catch (error) {
+    console.error("Error fetching all classes:", error);
+  }
+}
+
+function joinClass(classes) {
+  
+
+  classes.enrolledClasses.forEach((cls) => {
+    
+  });
+}
