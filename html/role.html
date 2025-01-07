@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="/src/output.css" />
     <title>Document</title>
   </head>
+
   <body>
     <body class="h-screen">
       <div class="h-full flex flex-row">
@@ -28,14 +29,14 @@
                   <li>
                     <input
                       type="radio"
-                      id="hosting-small"
-                      name="hosting"
-                      value="hosting-small"
+                      id="Student"
+                      name="role"
+                      value="Student"
                       class="hidden peer"
                       required
                     />
                     <label
-                      for="hosting-small"
+                      for="Student"
                       class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
                     >
                       <div class="block">
@@ -46,13 +47,13 @@
                   <li>
                     <input
                       type="radio"
-                      id="hosting-big"
-                      name="hosting"
-                      value="hosting-big"
+                      id="Teacher"
+                      name="role"
+                      value="Teacher"
                       class="hidden peer"
                     />
                     <label
-                      for="hosting-big"
+                      for="Teacher"
                       class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700"
                     >
                       <div class="block">
@@ -65,7 +66,8 @@
 
               <div>
                 <button
-                  type="submit"
+                  type="button"
+                  onclick="validateForm()"
                   class="flex w-full justify-center rounded-md bg-blue-600 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                 >
                   Conntinue
@@ -89,6 +91,28 @@
           </div>
         </div>
       </div>
+
+      <script>
+        function validateForm() {
+          const radios = document.getElementsByName("role"); // Ambil semua radio button dengan nama 'option'
+          let isChecked = false;
+
+          // Periksa apakah salah satu radio button sudah dipilih
+          for (const radio of radios) {
+            if (radio.checked) {
+              isChecked = true;
+              break;
+            }
+          }
+
+          if (isChecked) {
+            window.location.href = "/HTML/dashboard.html";
+          } else {
+            event.preventDefault();
+            alert("Silakan pilih salah satu opsi sebelum melanjutkan.");
+          }
+        }
+      </script>
     </body>
   </body>
 </html>
